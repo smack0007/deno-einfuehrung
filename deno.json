@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.window", "deno.unstable"]
+  },
+  "tasks": {
+    "readme": "deno run --allow-read ./readFile.ts"
+  }
+}
