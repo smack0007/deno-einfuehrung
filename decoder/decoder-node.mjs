@@ -1,5 +1,3 @@
-// node ./decoder.node.mjs
-
 import { Buffer } from "buffer";
 import { TextDecoder } from "util";
 

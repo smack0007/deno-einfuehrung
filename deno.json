@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "lib": ["deno.window", "deno.unstable"]
+    "lib": ["deno.window", "deno.unstable"],
+    "jsx": "react"
   },
   "tasks": {
-    "readme": "deno run --allow-read ./readFile.ts"
+    "decoder": "cd decoder && deno run ./decoder.ts",
+    "decoder-node": "cd decoder && node ./decoder-node.mjs",
+    "react-ssr": "cd react-ssr && deno run --allow-net --allow-read ./server.tsx",
+    "readFile": "cd readFile && deno run --allow-read ./readFile.ts",
+    "readFile-bench": "cd readFile && deno bench --unstable --allow-read ./readFile.bench.ts"
   }
 }
