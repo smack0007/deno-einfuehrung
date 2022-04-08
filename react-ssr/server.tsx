@@ -10,21 +10,22 @@ app.use(async (context, next) => {
       index: "index.html",
     });
   } catch {
-    next();
+    await next();
   }
 });
 
 app.use((ctx) => {
   ctx.response.body = `<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>Deno React</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="root">${ReactDomServer.renderToString(<App />)}</div>
   </body>
 </html>
-  `;
+`;
 });
 
 app.addEventListener("listen", (ev) => {
